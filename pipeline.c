@@ -8,6 +8,7 @@
 #define SIZE 1000000
 #define FILE_NAME "input.txt"
 
+
 long neon_iteration;
 
 float32_t mul(float *source,float *weight);
@@ -45,6 +46,7 @@ int main(int argc, char *argv[])
     printf("output:  %f\n",mul(source,weight));
     clock_gettime(CLOCK_REALTIME,&end);
     printf("spend:  %ld us\n",diff_in_us(start,end));
+    fclose(fptr);
     return 0;
 }
 
